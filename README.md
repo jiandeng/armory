@@ -26,11 +26,11 @@ To set up this environment on a fresh Mac:
 
 1. Clone this repository into your workspace:
    ```bash
-   git clone https://github.com/jiandeng/armory ~/armory
+   git clone https://github.com/jiandeng/armory ~/.armory
    ```
 2. Navigate to the directory and run the bootstrap script:
    ```bash
-   cd ~/armory && ./bootstrap.sh
+   cd ~/.armory && ./bootstrap.sh
    ```
 3. Restart your terminal.
 
