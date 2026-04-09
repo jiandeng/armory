@@ -12,7 +12,7 @@
 
 ## 🧱 Stack
 - **Manager**: [chezmoi](https://www.chezmoi.io/)
-- **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Brew), [nrfutil](https://www.nordicsemi.com/Products/Development-tools/nRF-Util) (Plugins: sdk-manager, device)
+- **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Brew), [Zephyr SDK](https://github.com/zephyrproject-rtos/sdk-ng) (Native v0.17.4), [nrfutil](https://www.nordicsemi.com/Products/Development-tools/nRF-Util) (Plugins: sdk-manager, device)
 - **GUI**: [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop) (Optional Cask)
 - **Shell**: Zsh (with Starship & fzf integration)
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)

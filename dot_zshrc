@@ -33,6 +33,12 @@ else
 fi
 
 # ==========================================
+# Toolchain & SDK Configuration
+# ==========================================
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=$HOME/.local/opt/zephyr-sdk
+
+# ==========================================
 # Tmux auto-attach (in interactive mode)
 # ==========================================
 if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
