@@ -1,3 +1,7 @@
+# Casks (Pre-compiled applications)
+cask "nrfutil"
+cask "nrf-connect"
+
 # Core utilities
 brew "wget"
 brew "coreutils"

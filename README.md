@@ -12,7 +12,8 @@
 
 ## 🧱 Stack
 - **Manager**: [chezmoi](https://www.chezmoi.io/)
-- **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Managed by Homebrew)
+- **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Brew), [nrfutil](https://www.nordicsemi.com/Products/Development-tools/nRF-Util) (Plugins: sdk-manager, device)
+- **GUI**: [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop) (Optional Cask)
 - **Shell**: Zsh (with Starship & fzf integration)
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
 - **Editor**: Neovim (Lua-based, Lazy.nvim)

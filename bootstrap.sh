@@ -41,5 +41,14 @@ fi
 echo "📦 Installing dependencies from Brewfile..."
 brew bundle --file="$CHEZMOI_SRC_DIR/Brewfile"
 
-# 5. Final confirmation
+# 5. Install nrfutil plugins (sdk-manager, device, etc.)
+echo "🛠️ Installing nrfutil plugins..."
+if command -v nrfutil >/dev/null 2>&1; then
+    # Ensure toolchain manager is ready
+    nrfutil install trace mcu-manager device sdk-manager ble-sniffer npm suit completion 91 nrf5sdk-tools --force
+else
+    echo "⚠️ Warning: nrfutil not found, skipping plugin installation."
+fi
+
+# 6. Final confirmation
 echo "✅ Bootstrap complete! Please restart your terminal."
