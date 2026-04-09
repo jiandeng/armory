@@ -39,7 +39,7 @@ fi
 
 # 4. Install Brewfile dependencies
 echo "📦 Installing dependencies from Brewfile..."
-# Use the local Brewfile to avoid "No Brewfile found" error if apply failed or mapping is weird
 brew bundle --file="$CHEZMOI_SRC_DIR/Brewfile"
 
+# 5. Final confirmation
 echo "✅ Bootstrap complete! Please restart your terminal."

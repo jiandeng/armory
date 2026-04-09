@@ -12,6 +12,7 @@
 
 ## 🧱 Stack
 - **Manager**: [chezmoi](https://www.chezmoi.io/)
+- **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Managed by Homebrew)
 - **Shell**: Zsh (with Starship & fzf integration)
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
 - **Editor**: Neovim (Lua-based, Lazy.nvim)
