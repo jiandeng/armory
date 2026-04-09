@@ -1,0 +1,32 @@
+# ~/.config/starship.toml
+
+add_newline = false
+
+# Set the format for the prompt
+format = """
+[╭─](bold green)$directory$git_branch$git_status$c
+[╰─$character](bold green) """
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = true
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "🌱 "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+
+[c]
+symbol = "C/C++ "
+style = "bold blue"
+
+[python]
+symbol = "🐍 "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold yellow)"

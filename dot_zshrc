@@ -1,0 +1,115 @@
+# ==========================================
+# Arch isolation & Path protection
+# ==========================================
+
+# Architecture aliases
+alias arm="arch -arm64 zsh"
+alias intel="arch -x86_64 zsh"
+
+if [[ "$(uname -m)" == "arm64" ]]; then
+    # Prevent x86 paths in arm64 context
+    path=(
+      /opt/homebrew/bin
+      /opt/homebrew/sbin
+      ~/.local/bin
+      /usr/bin
+      /bin
+      /usr/sbin
+      /sbin
+    )
+else
+    # Allow x86 paths (like old brew or vendor tools) only in x86_64 shell
+    path=(
+      /usr/local/bin
+      /usr/local/sbin
+      ~/.local/bin
+      /usr/bin
+      /bin
+      /usr/sbin
+      /sbin
+    )
+fi
+
+# ==========================================
+# Tmux auto-attach (in interactive mode)
+# ==========================================
+if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
+    tmux attach || tmux new
+fi
+
+# ==========================================
+# Zsh Basics & Vi mode
+# ==========================================
+autoload -Uz compinit
+compinit
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{A-Z}={a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+bindkey -v
+export KEYTIMEOUT=1
+
+# History navigation in Vi mode
+bindkey '^P' up-line-or-history
+bindkey '^N' down-line-or-history
+
+# Emacs-style shortcuts in Vi-Insert mode
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+bindkey '^f' forward-char
+bindkey '^b' backward-char
+bindkey '^d' delete-char
+bindkey '^u' backward-kill-line
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+
+# Word boundaries: Remove '/' so Ctrl-w stops at directory levels
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+# ==========================================
+# Aliases
+# ==========================================
+alias ll="ls -lahG"
+alias gs="git status"
+alias v="nvim"
+alias vi="nvim"
+alias t="tmux"
+
+# ==========================================
+# Plugins integrations
+# ==========================================
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# starship prompt
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+fi
+
+# Modern Zsh Plugins (Installed via Homebrew)
+# Syntax Highlighting
+if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# Autosuggestions
+if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# Zoxide (Modern replacement for j/autojump)
+# alias j="zi" calls the interactive fzf selection
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+    alias j="zi"
+fi

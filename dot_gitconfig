@@ -1,0 +1,31 @@
+[user]
+	# Name and email are deliberately left empty for you to fill in
+	# name = yourname
+	# email = your@email.com
+
+[core]
+	editor = nvim
+	compression = -1
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+	precomposeunicode = true
+
+[color]
+	ui = auto
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	followTags = true
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[init]
+	defaultBranch = main

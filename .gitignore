@@ -1,0 +1,13 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might be created by MacOS
+Icon?
+._*
+
+# Files that might be created by local setup
+.chezmoidata/
+.chezmoistate/
+*.swp
+*~
