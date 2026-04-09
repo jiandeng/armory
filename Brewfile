@@ -1,6 +1,7 @@
 # Casks (Pre-compiled applications)
 cask "nrfutil"
 cask "nrf-connect"
+cask "segger-jlink"
 
 # Core utilities
 brew "wget"
@@ -36,7 +37,7 @@ brew "picocom"
 # Runtimes for LSP (Mason)
 brew "node"
 brew "go"
-brew "pipx"
+brew "uv"
 brew "cmake-language-server"
 
 # Optional basic Cask (Terminal)

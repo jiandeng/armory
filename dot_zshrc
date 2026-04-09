@@ -12,6 +12,7 @@ if [[ "$(uname -m)" == "arm64" ]]; then
       /opt/homebrew/bin
       /opt/homebrew/sbin
       ~/.local/bin
+      /Applications/SEGGER/JLink
       /usr/bin
       /bin
       /usr/sbin
@@ -23,6 +24,7 @@ else
       /usr/local/bin
       /usr/local/sbin
       ~/.local/bin
+      /Applications/SEGGER/JLink
       /usr/bin
       /bin
       /usr/sbin
