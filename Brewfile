@@ -1,6 +1,7 @@
 # Casks (Pre-compiled applications)
 cask "nrfutil"
 cask "nrf-connect"
+cask "nordic-nrf-command-line-tools"
 cask "segger-jlink"
 
 # Core utilities
