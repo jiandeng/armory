@@ -17,6 +17,8 @@ if [[ "$(uname -m)" == "arm64" ]]; then
       /bin
       /usr/sbin
       /sbin
+      /usr/local/bin
+      /usr/local/sbin
     )
 else
     # Allow x86 paths (like old brew or vendor tools) only in x86_64 shell
