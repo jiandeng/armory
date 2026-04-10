@@ -14,7 +14,7 @@
 - **Manager**: [chezmoi](https://www.chezmoi.io/)
 - **Toolchain**: [west](https://docs.zephyrproject.org/latest/develop/west/index.html) (Brew), [Zephyr SDK](https://github.com/zephyrproject-rtos/sdk-ng) (Native v0.17.4), [nrfutil](https://www.nordicsemi.com/Products/Development-tools/nRF-Util), [nRF Command Line Tools](https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools) (Universal Binaries)
 - **GUI**: [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop) (Optional Cask)
-- **Shell**: Zsh (with Starship & fzf integration)
+- **Shell**: Zsh (with Starship, fzf & ack integration)
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
 - **Editor**: Neovim (Lua-based, Lazy.nvim)
 - **Architecture**: ARM64 as default, Intel (x86_64) isolated.
