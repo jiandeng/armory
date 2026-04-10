@@ -3,6 +3,7 @@ cask "nrfutil"
 cask "nrf-connect"
 cask "nordic-nrf-command-line-tools"
 cask "segger-jlink"
+cask "android-platform-tools"
 
 # Core utilities
 brew "wget"
