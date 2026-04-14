@@ -40,6 +40,11 @@ fi
 export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 export ZEPHYR_SDK_INSTALL_DIR=$HOME/.local/opt/zephyr-sdk
 
+# Auto-activate default Python environment
+if [[ -f "$HOME/.venv/default/bin/activate" ]]; then
+    source "$HOME/.venv/default/bin/activate"
+fi
+
 # ==========================================
 # Tmux auto-attach (in interactive mode)
 # ==========================================

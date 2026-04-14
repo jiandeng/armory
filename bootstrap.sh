@@ -74,5 +74,17 @@ fi
 echo "🔗 Updating Zephyr SDK symlink..."
 ln -sfn "$ZEPHYR_SDK_DIR" "$HOME/.local/opt/zephyr-sdk"
 
-# 8. Final confirmation
+# 8. Setup Default Python Environment (v3.12)
+DEFAULT_VENV="$HOME/.venv/default"
+if [ ! -d "$DEFAULT_VENV" ]; then
+    echo "🐍 Creating default Python environment (v3.12)..."
+    mkdir -p "$HOME/.venv"
+    uv venv "$DEFAULT_VENV" --python 3.12
+fi
+
+echo "🐍 Syncing packages for default environment from requirements.txt..."
+# Use uv pip to sync packages into the default venv
+uv pip install -r "$CHEZMOI_SRC_DIR/requirements.txt" --python "$DEFAULT_VENV/bin/python"
+
+# 9. Final confirmation
 echo "✅ Bootstrap complete! Please restart your terminal."

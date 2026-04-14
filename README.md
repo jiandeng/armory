@@ -18,6 +18,7 @@
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
 - **Editor**: Neovim (Lua-based, Lazy.nvim)
 - **Architecture**: ARM64 as default, Intel (x86_64) isolated.
+- **Python Lab**: Automated `~/.venv/default` via `requirements.txt` (Auto-activated).
 
 ---
 
