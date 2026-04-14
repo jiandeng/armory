@@ -243,7 +243,15 @@ return {
   -- Comment.nvim (Modern commenting)
   {
     "numToStr/Comment.nvim",
-    opts = {},
+    opts = function()
+      local ft = require("Comment.ft")
+
+      return {
+        pre_hook = function(ctx)
+          return ft.get(vim.bo.filetype, ctx.ctype) or vim.bo.commentstring
+        end,
+      }
+    end,
   },
 
   -- Autopairs

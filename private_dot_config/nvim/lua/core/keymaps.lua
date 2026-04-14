@@ -1,6 +1,5 @@
-vim.g.mapleader = ","
-
 local keymap = vim.keymap
+local comment = require("core.comment")
 
 -- General
 keymap.set("i", "jk", "<ESC>")
@@ -43,3 +42,16 @@ keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- Commenting (via Comment.nvim)
+-- ,cc comment with current style, ,cu uncomment, ,ca switch style when supported
+keymap.set("n", "<leader>cc", comment.comment_line, { desc = "Comment line with current style" })
+keymap.set("n", "<leader>cu", comment.uncomment_line, { desc = "Uncomment line" })
+keymap.set("x", "<leader>cc", comment.comment_selection, { desc = "Comment selection with current style" })
+keymap.set("x", "<leader>cu", comment.uncomment_selection, { desc = "Uncomment selection" })
+
+vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+  callback = function(args)
+    comment.configure_alt_keymaps(args.buf)
+  end,
+})

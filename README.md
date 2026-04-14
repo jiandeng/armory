@@ -16,7 +16,7 @@
 - **GUI**: [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop) (Optional Cask)
 - **Shell**: Zsh (with Starship, fzf & ack integration)
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
-- **Editor**: Neovim (Lua-based, Lazy.nvim)
+- **Editor**: Neovim (v0.11+) with Smart Commenting System (`,cc`, `,cu`, `,ca`)
 - **Architecture**: ARM64 as default, Intel (x86_64) isolated.
 - **Python Lab**: Automated `~/.venv/default` via `requirements.txt` (Auto-activated).
 

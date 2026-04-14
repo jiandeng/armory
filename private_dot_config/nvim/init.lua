@@ -1,6 +1,7 @@
--- require core configurations
+vim.g.mapleader = ","
+
+-- Load core options early so plugins see the final editor defaults.
 require("core.options")
-require("core.keymaps")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -18,3 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load plugins
 require("lazy").setup("plugins")
+
+-- Load keymaps after plugins because comment mappings depend on Comment.nvim APIs.
+require("core.keymaps")
