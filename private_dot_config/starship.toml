@@ -1,15 +1,22 @@
 # ~/.config/starship.toml
+# Embedded Pro Minimalist Style
 
+# Don't print a new line at the start of the prompt
 add_newline = false
 
-# Set the format for the prompt
+# Minimalist single-line format
 format = """
-[╭─](bold green)$directory$git_branch$git_status$c
-[╰─$character](bold green) """
+$directory\
+$git_branch\
+$python\
+$cmd_duration\
+$status\
+$character"""
 
 [directory]
 style = "bold cyan"
-truncate_to_repo = true
+truncation_length = 4
+fish_style_pwd_dir_length = 2
 truncation_symbol = "…/"
 
 [git_branch]
@@ -17,14 +24,23 @@ symbol = "🌱 "
 style = "bold purple"
 
 [git_status]
-style = "bold red"
-
-[c]
-symbol = "C/C++ "
-style = "bold blue"
+disabled = true # Hidden as requested, keep it clean
 
 [python]
 symbol = "🐍 "
+style = "bold yellow"
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[cmd_duration]
+min_time = 2000 # Only show if command takes more than 2s
+format = "took [🕒 $duration]($style) "
+style = "yellow"
+
+[status]
+disabled = false
+format = '[[$symbol$common_meaning$signal_name$maybe_int]]($style) '
+map_symbol = true
+pipestatus = true
 
 [character]
 success_symbol = "[❯](bold green)"
