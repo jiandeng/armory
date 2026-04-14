@@ -25,7 +25,7 @@ opt.updatetime = 300
 opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
-opt.scrolloff = 7 -- Keep 7 lines above/below cursor (from user's old config)
+opt.scrolloff = 2 -- Keep 2 lines above/below cursor to prevent heavy jumping on click
 opt.mouse = "a"
 
 -- Backup/Undo
