@@ -21,6 +21,8 @@ brew "starship"
 brew "chezmoi"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
+brew "poppler"
+
 
 # Embedded & C/C++ Development (Zephyr/NCS Essentials)
 brew "cmake"
