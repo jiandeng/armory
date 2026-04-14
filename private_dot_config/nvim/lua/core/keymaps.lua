@@ -7,12 +7,6 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>w", ":w!<CR>") -- Fast saving with bang (from user's old config)
 keymap.set("n", "<leader>q", ":q<CR>")
 
--- Window navigation (Vi-style)
-keymap.set("n", "<C-h>", "<C-w>h")
-keymap.set("n", "<C-j>", "<C-w>j")
-keymap.set("n", "<C-k>", "<C-w>k")
-keymap.set("n", "<C-l>", "<C-w>l")
-
 -- Splits
 keymap.set("n", "<leader>sv", "<C-w>v")
 keymap.set("n", "<leader>sh", "<C-w>s")
