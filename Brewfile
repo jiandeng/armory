@@ -42,6 +42,8 @@ brew "node"
 brew "go"
 brew "uv"
 brew "cmake-language-server"
+brew "protobuf"
+brew "protobuf-c"
 
 # Optional basic Cask (Terminal)
 # cask "iterm2" # Can uncomment if iterm2 itself needs to be managed by brew
