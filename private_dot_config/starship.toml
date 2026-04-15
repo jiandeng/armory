@@ -7,7 +7,6 @@ add_newline = false
 # Minimalist single-line format
 format = """
 $directory\
-$git_branch\
 $python\
 $cmd_duration\
 $status\
@@ -20,11 +19,13 @@ fish_style_pwd_dir_length = 2
 truncation_symbol = "…/"
 
 [git_branch]
+disabled = true
 symbol = "🌱 "
 style = "bold purple"
 
 [git_status]
 disabled = true # Hidden as requested, keep it clean
+
 
 [python]
 symbol = "🐍 "
