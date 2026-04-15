@@ -74,7 +74,8 @@ bindkey '^e' end-of-line
 bindkey '^f' forward-char
 bindkey '^b' backward-char
 bindkey '^d' delete-char
-bindkey '^u' backward-kill-line
+bindkey '^u' kill-whole-line
+
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 bindkey '^[b' backward-word
