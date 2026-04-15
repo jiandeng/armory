@@ -95,7 +95,9 @@ WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 # ==========================================
 # Aliases
 # ==========================================
+alias ls="ls -G"
 alias ll="ls -lahG"
+
 alias gs="git status"
 alias v="nvim"
 alias vi="nvim"
