@@ -88,8 +88,9 @@ setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_all_dups
 
-# Word boundaries: Remove '/' so Ctrl-w stops at directory levels
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+# Word boundaries: Remove '/' and '=' so Ctrl-w stops at directory levels and argument values
+WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
+
 
 # ==========================================
 # Aliases
