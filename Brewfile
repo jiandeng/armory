@@ -4,6 +4,8 @@ cask "nrf-connect"
 cask "nordic-nrf-command-line-tools"
 cask "segger-jlink"
 cask "android-platform-tools"
+cask "r"
+cask "rstudio"
 
 # Core utilities
 brew "wget"
