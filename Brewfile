@@ -10,6 +10,9 @@ cask "rstudio"
 # Core utilities
 brew "wget"
 brew "coreutils"
+brew "gnu-sed"
+brew "rename"
+
 
 # Modern CLI tools
 brew "git"
