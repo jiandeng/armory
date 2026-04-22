@@ -43,3 +43,5 @@ urllib3
 west
 ipython
 jupyterlab
+pandas
+numpy
