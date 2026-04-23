@@ -101,6 +101,8 @@ alias ll="ls -lahG"
 
 alias gs="git status"
 alias clr="clear"
+alias diff='git diff --no-index'
+
 
 alias v="nvim"
 alias vi="nvim"
