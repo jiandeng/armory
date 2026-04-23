@@ -43,6 +43,7 @@ brew "west"
 brew "arm-none-eabi-gcc"
 brew "openocd"
 brew "picocom"
+brew "libomp"
 
 # Runtimes for LSP (Mason)
 brew "node"

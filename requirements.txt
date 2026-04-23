@@ -45,3 +45,8 @@ ipython
 jupyterlab
 pandas
 numpy
+aeon
+polars
+xgboost
+scikit-learn
+pyarrow
