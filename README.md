@@ -18,7 +18,7 @@
 - **Multiplexer**: Tmux (Prefix: `Ctrl-a`)
 - **Editor**: Neovim (v0.11+) with Smart Commenting System (`,cc`, `,cu`, `,ca`)
 - **Architecture**: ARM64 as default, Intel (x86_64) isolated.
-- **Python Lab**: Data analysis stack (polars, pandas, xgboost, scikit-learn, aeon, jupyterlab) via `requirements.txt` (Auto-activated).
+- **Python Lab**: Data analysis stack (polars, pandas, xgboost, scikit-learn, aeon, plotly, matplotlib, jupyterlab) via `requirements.txt` (Auto-activated).
 
 
 

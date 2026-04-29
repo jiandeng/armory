@@ -50,3 +50,5 @@ polars
 xgboost
 scikit-learn
 pyarrow
+plotly
+matplotlib
