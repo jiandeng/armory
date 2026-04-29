@@ -88,6 +88,7 @@ To set up this environment on a fresh Mac:
 | `,ff` | **Find Files**: Search files by name |
 | `,fg` | **Live Grep**: Search text inside files |
 | `,fb` | **Buffers**: Switch between open files |
+| `,bd` | **Close Buffer**: Close current file but keep window |
 | `jk` | **Escape**: Return to Normal mode |
 
 ### 🌳 Git & Version Control

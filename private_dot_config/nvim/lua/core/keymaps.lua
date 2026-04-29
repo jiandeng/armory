@@ -6,6 +6,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>w", ":w!<CR>") -- Fast saving with bang (from user's old config)
 keymap.set("n", "<leader>q", ":q<CR>")
+keymap.set("n", "<leader>bd", "<cmd>Bdelete<CR>", { desc = "Delete buffer but keep window" })
 
 -- Splits
 keymap.set("n", "<leader>sv", "<C-w>v")

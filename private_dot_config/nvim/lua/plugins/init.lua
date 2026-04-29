@@ -36,6 +36,9 @@ return {
   -- Icons (Essential for UI)
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
+  -- Buffer Delete (Gracefully close buffers without closing windows)
+  { "famiu/bufdelete.nvim" },
+
   -- Lualine (Statusline)
   {
     "nvim-lualine/lualine.nvim",
